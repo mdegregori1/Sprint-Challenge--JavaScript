@@ -16,34 +16,25 @@ function consume (a,b, cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function add(a,b,cb){
-  cb (a+b);
+function add(a,b,){
+  return (a+b);
 }
-add(16,5, function(consume){
-  console.log(consume);
-});
-//
-function multiply(a,b,cb){
-  cb (a*b);
-}
-multiply(10,16, function(consume){
-  console.log(consume);
-})
-//
- function greeting(firstname, lastname){
-   return (`Hello ${firstname}${lastname}, nice to meet you!`)
- };
- greeting('Mary', 'Poppins', function(consume){
-    console.log(consume);
- })
 
+function multiply(a,b){
+  return (a*b);
+}
+
+function greeting(firstname, lastname){
+  return (`Hello ${firstname} ${lastname}, nice to meet you!`)
+ };
+ 
 
 
 // */
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -51,17 +42,17 @@ multiply(10,16, function(consume){
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
+// This is because it is a closure -- therefore, nestedfunction has access to an outer function scope, which in this case, includes the variable internal.
 
+// const external = "I'm outside the function";
 
-const external = "I'm outside the function";
+// function myFunction() {
+//   console.log(external);
+//   const internal = "Hello! I'm inside myFunction!";
 
-function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
-
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
-}
-myFunction();
+//   function nestedFunction() {
+//     console.log(internal);
+//   };
+//   nestedFunction();
+// }
+// myFunction();
