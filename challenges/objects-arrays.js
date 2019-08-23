@@ -96,15 +96,16 @@ graduates.forEach(function(info) {
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = []
-for (let i=0; i< graduates.length; i ++ ){
-  if (graduates[i].university === "Salem University"){
-    unisWithUni.push(graduates[i]);
-  }
-}
-console.log(JSON.stringify(unisWithUni));
+// const unisWithUni = []
+// for (let i=0; i< graduates.length; i ++ ){
+//   if (graduates[i].university === "Uni"){
+//     unisWithUni.push(graduates[i]);
+//   }
+// }
+// console.log(JSON.stringify(unisWithUni));
 
-// incomplete
+
+const zooAnimals = [
   { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
   { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
   { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
